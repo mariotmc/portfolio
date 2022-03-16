@@ -1,0 +1,54 @@
+@use "functions" as *;
+@use "variables" as *;
+
+.bounce {
+  animation: bounce 2s ease-in-out infinite;
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-5px);
+  }
+  60% {
+    transform: translateY(-2px);
+  }
+}
+
+.drop-in {
+  animation: drop-in 1500ms ease backwards;
+}
+
+.drop-in-2 {
+  animation: drop-in 1500ms ease 1500ms backwards;
+}
+
+@keyframes drop-in {
+  from {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0px);
+  }
+}
+
+.appear {
+  animation: appear 1500ms ease 2800ms backwards;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

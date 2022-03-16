@@ -1,0 +1,43 @@
+@use "functions" as *;
+@use "variables" as *;
+
+#home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 100vh;
+  font-size: rem(35);
+  line-height: 1.5;
+
+  span {
+    color: var(--red);
+  }
+
+  button {
+    margin-top: rem(20);
+    padding: rem(8);
+    font-size: rem(20);
+    color: inherit;
+    background-color: transparent;
+    border: 2px solid var(--red);
+    border-radius: 10px;
+    cursor: pointer;
+
+    a {
+      display: flex;
+      align-items: center;
+    }
+
+    svg {
+      width: rem(25);
+      height: rem(25);
+      fill: var(--red);
+      animation-name: bounce;
+      animation-duration: 2s;
+      animation-fill-mode: both;
+    }
+  }
+}

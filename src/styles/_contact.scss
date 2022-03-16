@@ -1,0 +1,31 @@
+@use "functions" as *;
+@use "variables" as *;
+
+#contact {
+  text-align: center;
+
+  p {
+    margin-bottom: rem(50);
+  }
+
+  .icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: rem(50);
+
+    .contact-link {
+      width: rem(75);
+      height: rem(75);
+
+      svg {
+        fill: var(--white);
+        transition: fill 300ms ease-in-out;
+
+        &:hover {
+          fill: var(--red);
+        }
+      }
+    }
+  }
+}
